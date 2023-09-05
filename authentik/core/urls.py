@@ -13,6 +13,8 @@ from authentik.core.api.devices import AdminDeviceViewSet, DeviceViewSet
 from authentik.core.api.groups import GroupViewSet
 from authentik.core.api.propertymappings import PropertyMappingViewSet
 from authentik.core.api.providers import ProviderViewSet
+from authentik.core.api.rbac_object_role import RBACObjectRoleViewSet
+from authentik.core.api.rbac_object_user import RBACObjectUserViewSet
 from authentik.core.api.sources import SourceViewSet, UserSourceConnectionViewSet
 from authentik.core.api.tokens import TokenViewSet
 from authentik.core.api.users import UserViewSet
@@ -73,6 +75,8 @@ api_urlpatterns = [
     ("core/groups", GroupViewSet),
     ("core/users", UserViewSet),
     ("core/tokens", TokenViewSet),
+    ("core/rbac/object_user", RBACObjectUserViewSet),
+    ("core/rbac/object_role", RBACObjectRoleViewSet),
     ("sources/all", SourceViewSet),
     ("sources/user_connections/all", UserSourceConnectionViewSet),
     ("providers/all", ProviderViewSet),

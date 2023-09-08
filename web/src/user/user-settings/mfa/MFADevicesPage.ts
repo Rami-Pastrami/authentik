@@ -114,6 +114,10 @@ export class MFADevicesPage extends Table<Device> {
                 return new AuthenticatorsApi(DEFAULT_CONFIG).authenticatorsWebauthnDestroy({
                     id: device.pk,
                 });
+            case "authentik_stages_authenticator_mobile.mobiledevice":
+                return new AuthenticatorsApi(DEFAULT_CONFIG).authenticatorsMobileDestroy({
+                    uuid: device.pk as unknown as string,
+                });
             default:
                 break;
         }

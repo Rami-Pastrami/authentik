@@ -123,6 +123,8 @@ To allow un-authenticated requests to certain paths/URLs, you can use the _Unaut
 
 Each new line is interpreted as a regular expression, and is compiled and checked using the standard Golang regex parser.
 
+When adding unauthenticated path (as in using the domain of said configured proxy provider), only include the subdirectory path you wish to have unauthenticated
+
 The behaviour of this field changes depending on which mode you're in.
 
 ### Proxy and Forward auth (single application)
